@@ -10,7 +10,7 @@ fn main() -> std::io::Result<()> {
     rom[lives_address] = 255;
     
     let mut pos = 0;
-    let mut buffer = File::create("PatchedBurgetTime.nes")?;
+    let mut buffer = File::create("PatchedBurgerTime.nes")?;
     while pos < rom.len() {
         let bytes_written = buffer.write(&rom[pos..])?;
         pos += bytes_written;
